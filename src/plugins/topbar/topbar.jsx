@@ -170,7 +170,7 @@ export default class Topbar extends React.Component {
           <div className="topbar-wrapper">
             <Link href="#">
               <img height="30" width="30" className="topbar-logo__img" src={ Logo } alt=""/>
-              <span className="topbar-logo__title">Swagger Editor</span>
+              <span className="topbar-logo__title">Fenix DevOps Swagger Editor</span>
             </Link>
             <DropdownMenu {...makeMenuOptions("File")}>
               <li><button type="button" onClick={this.importFromURL}>Import URL</button></li>
@@ -181,14 +181,6 @@ export default class Topbar extends React.Component {
             </DropdownMenu>
             <DropdownMenu {...makeMenuOptions("Edit")}>
               <li><button type="button" onClick={this.convertToYaml}>Convert to YAML</button></li>
-            </DropdownMenu>
-            <DropdownMenu className="long" {...makeMenuOptions("Generate Server")}>
-              { this.state.servers
-                  .map(serv => <li><button type="button" onClick={this.downloadGeneratedFile.bind(null, "server", serv)}>{serv}</button></li>) }
-            </DropdownMenu>
-            <DropdownMenu className="long" {...makeMenuOptions("Generate Client")}>
-              { this.state.clients
-                  .map(cli => <li><button type="button" onClick={this.downloadGeneratedFile.bind(null, "client", cli)}>{cli}</button></li>) }
             </DropdownMenu>
           </div>
         </div>
