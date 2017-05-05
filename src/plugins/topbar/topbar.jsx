@@ -170,7 +170,7 @@ export default class Topbar extends React.Component {
           <div className="topbar-wrapper">
             <Link href="#">
               <img height="30" width="30" className="topbar-logo__img" src={ Logo } alt=""/>
-              <span className="topbar-logo__title">Fenix DevOps Swagger Editor</span>
+              <span className="topbar-logo__title">Swagger Editor</span>
             </Link>
             <DropdownMenu {...makeMenuOptions("File")}>
               <li><button type="button" onClick={this.importFromURL}>Import URL</button></li>
